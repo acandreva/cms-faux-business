@@ -9,8 +9,8 @@ function blank_widgets_init() {
         'description' => 'Widget for our sidebar on pages', 
         'before_widget' => '<div class="widget-sidebar">', 
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
         ));
 /*--- Footer Widget One--- */
     register_sidebar( array(
@@ -19,8 +19,8 @@ function blank_widgets_init() {
         'description' => 'First widget for our footer', 
         'before_widget' => '<div class="widget-footer">', 
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
         ));
 /*--- Footer Widget Two--- */
     register_sidebar( array(
@@ -29,8 +29,8 @@ function blank_widgets_init() {
         'description' => 'Second widget for our footer', 
         'before_widget' => '<div class="widget-footer">', 
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
         ));
 /*--- Footer Widget Three--- */
     register_sidebar( array(
@@ -39,8 +39,8 @@ function blank_widgets_init() {
         'description' => 'Third widget for our footer', 
         'before_widget' => '<div class="widget-footer">',
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>'
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
         ));
     }
 add_action('widgets_init', 'blank_widgets_init');
@@ -48,7 +48,7 @@ add_action('widgets_init', 'blank_widgets_init');
 /*-------------- Enable Menu--------------- */
 add_theme_support('menus');
 
-/*-------------- Enable Post Thumbnails--------------- */
-add_theme_support('post-thumbnails');
+/*-------------- Search Form --------------- */
+add_theme_support( 'html5', array( 'search-form' ) );
 
 ?>
