@@ -1,20 +1,22 @@
 <?php get_header(); ?>
+<div class="container marginspage">
     <div class="row">
-<!-- BEGIN PAGE PHP -->
-        <div class="nine columns">
+        <div class="eight columns">
             <?php if (have_posts()) : 
                 /* OUR DATA CONTEXT IS DEFINED  */
                 while (have_posts()) : the_post(); ?> 
-                    <h3><?php the_title(); ?></h3>
                     <?php the_content();
                 endwhile;
             endif; ?>
         </div>
-<!-- END PAGE PHP -->
 <!-- BEGIN SIDEBAR AREA -->
-        <div class="three columns">
+        <div class="four columns sidebarstyle">
+            <div class="searchbx">
+                <?php get_search_form(); ?>
+            </div>
             <?php get_sidebar(); ?>
         </div>
 <!-- END SIDEBAR AREA -->
     </div>
+</div>
 <?php get_footer(); ?>
