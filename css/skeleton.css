@@ -41,7 +41,7 @@
   float: left;
   box-sizing: border-box; }
 
-/* For devices larger than 400px */
+/* For devices larger than 400px 
 @media (min-width: 400px) {
   .container {
     width: 85%;
@@ -51,7 +51,10 @@
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 90%; }
+	header .container {
+		width: 100%;
+	}
   .column,
   .columns {
     margin-left: 4%; }
@@ -110,8 +113,19 @@
   .offset-by-one-half.column,
   .offset-by-one-half.columns     { margin-left: 52%; }
 
+	header .four.columns, header .eight.columns { width: 100%;}
 }
 
+/* For devices larger than 737px */
+@media (min-width: 737px) {
+	  header .container {
+	    width: 90%; }
+	
+	  header .four.columns                   { width: 30.6666666667%; }
+	  
+	  header .eight.columns                  { width: 65.3333333333%; }
+	  
+}
 
 /* Base Styles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -156,7 +170,7 @@ p {
 
 
 /* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 a {
   color: #1EAEDB; }
 a:hover {
@@ -164,7 +178,7 @@ a:hover {
 
 
 /* Buttons
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 .button,
 button,
 input[type="submit"],
@@ -224,7 +238,7 @@ input[type="button"].button-primary:focus {
 
 
 /* Forms
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -235,13 +249,13 @@ input[type="password"],
 textarea,
 select {
   height: 38px;
-  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit 
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
-/* Removes awkward default styles on some inputs for iOS */
+/* Removes awkward default styles on some inputs for iOS 
 input[type="email"],
 input[type="number"],
 input[type="search"],

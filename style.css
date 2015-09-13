@@ -1,15 +1,22 @@
 /*
-Theme Name: Allison Blank Theme
-Theme URI: URL for Allison Blank
+Theme Name: Allison Slick's Theme
+Theme URI: URL for Slick's Auto Body
 Author: Allison Logan
-Description: Blank theme for WIE course
+Description: Theme for Slick's Auto Body
 Version: 1.0
 License: Open
-Text Domain: allison_logan_blank_template
+Text Domain: allison_logan_slicks_template
 */
 
 @import url("css/skeleton.css");
 @import url("css/normalize.css");
+@import url("css/headroom.css");
+
+@font-face {
+    font-family: "Avenir";
+    src: local('Avenir'),
+        url("fonts/Avenir.ttc") format("truetype");
+}
 
 * {
     color: #000000;
@@ -21,44 +28,494 @@ Text Domain: allison_logan_blank_template
 
 h1 {font-size: 3.0rem;}
 h2 {font-size: 2.6rem;}
-h3 {font-size: 2.3rem;}
-h4 {font-size: 2.1rem;}
-h5 {font-size: 1.6rem;}
+h5 {font-size: 2rem;}
 h6 {font-size: 1.1rem;}
 
-/*--- Menu --- */
-
-.blank-menu-header {
-    text-align: left;
-    margin-top: 40px;
-    margin-bottom: 40px;
+::selection {
+    color: #fff; 
+    background: #06273e;
 }
 
-.blank-menu-header ul {
+a {
+    color: #649AA6;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #649AA6;
+    text-decoration: none;
+}
+
+/*Wordpress Image Alignment*/
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {margin: 1.5em auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {margin: 1.5em auto}
+
+.blogcontent img.aligncenter {display: none; margin: 1.5em auto}
+.blogcontent a img.aligncenter {display: none; margin: 1.5em auto}
+
+/*---List Styles---*/
+.blogcontent ul, .blogcontent2 ul, .marginspage ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+    margin-left: 15px;
+}
+
+.blogcontent ul li:before, .blogcontent2 ul li:before, .marginspage ul li:before {
+    content: "-";
+    position: relative;
+    left: -5px;
+}
+
+.blogcontent ul li, .blogcontent2 ul li, .marginspage ul li {
+    text-indent: 10px;
+}
+
+/*---Header---*/
+#header .container {
+        padding: 0;
+}
+
+/*--- Menu --- */
+.logo {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.menu-header1 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.menu-header2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-header1 ul, .menu-header2 ul {
     margin: 0; 
     padding: 0; 
     list-style-type: none; 
     list-style-image: none; 
 }
 
-.blank-menu-header li {
+.menu-header1 li, .menu-header2 li {
     display: inline;
 }
 
-.blank-menu-header ul li a {
+.menu-header1 ul li a, .menu-header2 ul li a {
     text-decoration: none;  
     margin: 4px;
-    padding: 5px 0px 5px 40px; 
+    padding: 5px 0px; 
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    color: #06273e;
 }
 
-.blank-menu-header ul li a:hover {
-    color: #cccccc;
+.menu-header1 ul li a:hover, .menu-header2 ul li a:hover {
+    color: #649AA6;
 }
 
 /*--Front Page--*/
-.post-thumbnail-container {
-    padding: 2px;
-    margin: 0 10px 10px 0;
+.home-slideshow {
+    width: 100%;
+    max-height: 900px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.homelogo {
+    width: 70%;
+    max-width: 700px;
+}
+
+.welcome {
+    margin: 50px 0;
+}
+
+/*---Coupons---*/
+.coupons a {
+    display: block;
+    width: 290px; 
+    height: 174px;
+        text-align: center;
+    margin: 5px auto;
+}
+
+.coupons a:hover {
+    background-position: center 174px; 
+}
+
+#coupon1 {background-image: url(http://www.allisoncandreva.com/wp_2/wp-content/themes/slicks-template-allisonlogan/images/coupon1_sprite.png);}
+#coupon2 {background-image: url(http://www.allisoncandreva.com/wp_2/wp-content/themes/slicks-template-allisonlogan/images/coupon2_sprite.png);}
+#coupon3 {background-image: url(http://www.allisoncandreva.com/wp_2/wp-content/themes/slicks-template-allisonlogan/images/coupon3_sprite.png);}
+#coupon4 {background-image: url(http://www.allisoncandreva.com/wp_2/wp-content/themes/slicks-template-allisonlogan/images/coupon4_sprite.png);}
+
+
+/*---Page Styles---*/
+.marginspage {
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+.confused {
+    text-align: center;
+}
+
+.map {
+    width: 100%;
+    max-width: 640px;
+    height: 50%;
+    max-height: 480px;
+    margin-bottom: 10px;
+}
+
+.schedule-style, .schedule-style code {
+        font-family: Avenir;
+}
+
+/*---Blog Page---*/
+h4, h4 a, h4 a:hover {
+    color: #649AA6;
+    text-decoration: none;
+    font-size: 1.5rem
+}
+
+h3, h3 a, h3 a:hover {
+    color: #000;
+    text-decoration: none;
+    font-size: 2.8rem;
+    line-height: 32px;
+}
+
+h3 a:hover {
+    text-decoration: underline;
+}
+
+.blogcontent {
+    width: 100%;
+    margin:170px auto 40px;
+}
+
+.blogcontent2 {
+    width: 100%;
+    margin: 200px auto 40px;
+}
+
+.blog-posts {
+    margin: 10% 0 0;
+    border-bottom: solid #000 1px;
+}
+
+.hide-content {
+    display: none;
+}
+
+.metainfo {
+    padding: 4px 0;
+    color: #757575;
+    font-style: oblique;
+}
+
+.metainfo a {
+    color: #757575;
+    text-decoration: none;
+}
+
+.metainfo a:hover {
+    color: #649AA6;
+    text-decoration: underline;
+}
+
+.meta-glyph {
+    margin: 0 5px;
+}
+
+.social-shortcode {
+    display: none;
+}
+
+.next_prev {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+/*--- Search ---*/
+.searchbx {
+    display: block;
+}
+
+.searchbx input, .error_search input {
+    border: 1px #000 solid;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    font-family: Avenir;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: Avenir;
+    color: #000;
+    background-color: #fff;
+}
+
+.error_search input {
+    color: #fff;
+    background-color: #06273e;
+}
+
+.searchbx input[type="submit"] {
+    width: 70px;
+    margin: 5px 0 0;
+    padding: 0;
+}
+
+.searchbx input[type="search"], .error_search input[type="search"] {
+    height: 18px;
+    width: 75px;
+}
+
+
+/*---Sidebar---*/
+.frontside {
+    margin-top: 50px;
+}
+
+.sidebarstyle ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+}
+
+.sidebarstyle ul li:before {
+    content: "-";
+    position: relative;
+    left: -5px;
+}
+
+.sidebarstyle ul li {
+    text-indent: 10px;
+}
+
+.sidebarstyle ul li a {
+    text-decoration: none;  
+    color: #000;
+}
+
+.sidebarstyle ul li a:hover {
+    color: #649AA6;
+}
+
+/*--- Footer---*/
+footer {
+    background-color: #06273e;
+    padding: 20px 0 10px;
+    margin-top: 20px;
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+footer p {
+    color: #fff;
+}
+
+footer a, footer a:hover {
+    text-decoration: none;
+}
+
+footer img {
+    padding-right: 5px;
+}
+
+.mapimg {
+        width: 100%;
+}
+.copyright {
+    text-align: center;
+        margin-top: 10px;
+}
+
+/*---HOME SLIDESHOW MEDIA QUERIES---*/
+    /*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+    @media screen and (min-width: 480px) and (min-height: 320px) {
+        /*---Front Page---*/
+        .home-slideshow {
+            height: 400px;
+        }
+        
+        .homelogo {
+            margin-top: 100px;
+        }
+    }
+
+    @media screen and (min-width: 320px) and (min-height: 480px) {
+        /*---Front Page---*/
+        .home-slideshow {
+            height: 300px;
+        }
+        
+        .homelogo {
+            margin-top: 100px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) and (min-height: 768px) {
+        /*---Front Page---*/
+        .home-slideshow {
+            height: 600px;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (min-height: 1024px) {
+        /*---Front Page---*/
+        .home-slideshow {
+            height: 600px;
+        }
+
+        .homelogo {
+            margin-top: 150px;
+        }
+    }
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 375px) {
+    /*---Menu---*/
+    .menu-header1 ul li a, .menu-header2 ul li a {
+        padding: 5px 0px 5px 10px; 
+        font-size: 1.5rem;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 467px) {
+    /*Wordpress Image Alignment*/
+    .blogcontent img.aligncenter, .blogcontent a img.aligncenter {display: block}
+
+    /*---Main Content---*/
+    .blogcontent, .blogcontent2 {
+        width: 80%;
+    }
+
+    .metainfo {
+        float: left;
+    }
+
+    .social-shortcode {
+        display: inline;
+    }
+
+    .hide-content {
+        display: block;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 478px) {
+    /*---Menu---*/
+    .menu-header1 ul li a, .menu-header2 ul li a {
+        padding: 5px 0px 5px 20px; 
+        font-size: 1.7rem;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 550px) {
+    /*---Sidebar---*/
+    .sidebarstyle {
+        padding-left: 10px;
+        border-left: 1px solid #000;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 737px) {
+    /*---Menu---*/
+    .logo {
+        float: left;
+        text-align: none;
+    }
+
+    .menu-header1 {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .menu-header1 ul li a {
+        padding: 5px 0px 5px 40px; 
+        font-size: 1.8rem;
+    }
+    
+    .menu-header2 {
+        text-align: right;
+        float: right;
+        margin-top: 50px;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 760px) {
+    /*---Menu---*/
+    .menu-header2 ul li a {
+        font-size: 1.8rem;
+    }
+
+        /*---Main Content---*/
+    .blogcontent, .blogcontent2 {
+        width: 60%;
+    }
+
+    .pagestyle {
+        width: 60%;
+        margin: 10% auto;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 780px) {
+    /*---Search---*/
+    .searchbx input[type="submit"] {
+        width: 80px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .searchbx input[type="search"], .error_search input[type="search"] {
+        height: 18px;
+        width: 100px;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 818px) {
+    /*---Main Content---*/
+    .blogcontent, .blogcontent2 {
+        width: 45%;
+    }
+
+    .pagestyle {
+        width: 45%;
+        margin: 10% auto;
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 934px) {
+    .menu-header2 ul li a {
+        padding: 5px 0px 5px 40px; 
+    }
+}
+
+/*~~~~~~NEW MEDIA QUERY~~~~~~~*/
+@media screen and (min-width: 1213px) {
+    .coupons a {
+        float: left;
+        margin: 5px 10px 5px 0;
+    }
 }
